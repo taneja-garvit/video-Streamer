@@ -57,7 +57,7 @@ userSchema.pre("save", async function(next) {         // pre is middleware used 
     next()
 })
 
-userSchema.methods.isPasswordCorrect = async function(password){ // using this so when exporting user it sould be checked if pass correct   
+userSchema.methods.isPasswordCorrect = async function(password){   
   return await bcrypt.compare(password,this.password) //comparing original and encrypted password
 }
 
