@@ -6,3 +6,4 @@ class ApiResponse {
       this.success = statusCode >= 200 && statusCode < 300; // success if status code is in the 2xx range
     }
 }  
+export {ApiResponse}
